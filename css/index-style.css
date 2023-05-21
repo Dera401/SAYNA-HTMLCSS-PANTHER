@@ -1,0 +1,45 @@
+@layer global-form {
+
+    /* definition global des marges et du comportement des boites */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* bordure de test */
+    body * {
+        border: 1px solid gold;
+    }
+
+    html {
+        background: url(../illustrations+Logo/All-pages/arrière_plan.png);
+        color: white;
+        font-size: 10px;
+    }
+
+    /* definition de taille global de la police */
+    li {
+        font-size: calc(1.5rem + 0.5vw);
+    }
+
+    /* definition de la classe container pour definir 80% de la largeur de la page */
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* partie header */
+    .entete {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .entete .main-nav ul {
+        display: flex;
+    }
+
+    .entete li {
+        list-style-type: none;
+    }
+}
