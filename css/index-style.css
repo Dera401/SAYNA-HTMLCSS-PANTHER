@@ -39,7 +39,7 @@
 
     /* bordure de test */
     body * {
-        /* border: 1px solid gold; */
+        border: 1px solid gold;
 
     }
 
@@ -86,7 +86,7 @@
     }
 
     div.text-historique {
-        width: 50%;
+        width: 80%;
         margin: 20px;
     }
 
@@ -265,6 +265,27 @@ section.blackPanther {
 
 section.historique {
     margin-top: 100px;
+    /* rajout de grid */
+    display: grid;
+    grid-template-areas: "ensemble carte"
+        "histoire2 poster";
+}
+
+.historique .ensemble {
+    grid-area: ensemble;
+}
+
+.historique .carte-Panther {
+    grid-area: carte;
+}
+
+.historique .hero {
+    grid-area: histoire2;
+}
+
+.historique .poster-Panther {
+    grid-area: poster;
+    padding-top: 60px;
 }
 
 .historique .bloc-historique {
@@ -273,13 +294,44 @@ section.historique {
     margin-bottom: 10px;
 }
 
-.historique p {
+/* bordure de la carte */
+
+.historique .carte-Panther .bordure-carte {
+    background-color: #fff;
+    width: 80%;
+    margin-top: 250px;
+    border-radius: 10px;
+
+}
+
+/* definition des typo propre  */
+.historique .carte-Panther .bordure-carte p, .historique .carte-Panther .bordure-carte h2, .historique .carte-Panther .bordure-carte li {
+    color: #000000;
+    font-family: 'Carantall', sans-serif;
+}
+
+.historique .carte-Panther .bordure-carte h2 {
+    font-size: calc(1rem + 0.8vw);
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+/* position et taille image Panther */
+.historique .carte-Panther .bordure-carte img {
+    margin-top: -50%;
+    margin-left: 5%;
+    width: 90%;
+}
+
+.historique .historique p {
     margin-bottom: 20px;
 }
 
 .historique h2 {
     margin: 40px 20px 20px 20px;
 }
+
+
 
 /* section nous contacter */
 section.contacter * {
