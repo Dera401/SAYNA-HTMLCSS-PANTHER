@@ -1,4 +1,34 @@
 @layer global-form {
+    @font-face {
+        font-family: 'Wakanda Forever';
+        src: url(../font/wakanda_forever/WakandaForever-Regular.ttf);
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: 'Panthera';
+        src: url(../font/Panthera/PantheraRegular-MVZ9J.ttf);
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: 'Beyno';
+        src: url(../font/beyno/BEYNO/BEYNO.otf),
+            url(../font/beyno/BEYNO/BEYNO.ttf);
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: 'Cantarell';
+        src: url(../font/Cantarell/Cantarell-Regular.ttf);
+        font-weight: normal;
+    }
+
+    @font-face {
+        font-family: 'Cantarell';
+        src: url(../font/Cantarell/Cantarell-Bold.ttf);
+        font-weight: bold;
+    }
 
     /* definition global des marges et du comportement des boites */
     * {
@@ -9,23 +39,64 @@
 
     /* bordure de test */
     body * {
-        border: 1px solid gold;
+        /* border: 1px solid gold; */
+
     }
 
     html {
         background: url(../illustrations+Logo/All-pages/arrière_plan.png);
         color: white;
+        width: 100%;
         font-size: 10px;
     }
 
-    /* definition de taille global de la police */
+    body {
+
+        padding-top: 20px;
+    }
+
+    /* Tipographie global */
     li {
-        font-size: calc(1.5rem + 0.5vw);
+        font-family: 'Beyno', sans-serif;
+        font-size: calc(0.8rem + 0.6vw);
+        color: white;
+    }
+
+    ul li {
+        list-style-type: none;
+    }
+
+    h1 {
+        font-family: 'Panthera', sans-serif;
+        font-size: calc(2.5rem + 2vw);
+        color: #9e91b7;
+    }
+
+    h2 {
+        font-family: 'Beyno', sans-serif;
+        font-size: calc(1rem + 1vw);
+        color: #9e91b7;
+    }
+
+    p, span.plus {
+        font-family: 'Cantarell', serif;
+        font-size: calc(0.5rem + 0.5vw);
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    div.text-historique {
+        width: 50%;
+        margin: 20px;
+    }
+
+    span.plus {
+        border-bottom: solid white 1px;
     }
 
     /* definition de la classe container pour definir 80% de la largeur de la page */
     .container {
-        width: 80%;
+        width: 85%;
         margin: 0 auto;
     }
 
@@ -35,11 +106,251 @@
         justify-content: space-between;
     }
 
-    .entete .main-nav ul {
-        display: flex;
+    .main-nav-container {
+        width: 30%;
     }
 
-    .entete li {
-        list-style-type: none;
+    .entete .main-nav-container ul {
+        display: flex;
+        justify-content: space-between;
     }
+
+
+    /* partie footer */
+    /* definition de footer en flex */
+    footer {
+        background: url(../illustrations+Logo/All-pages/back_footer.png);
+        width: 100%;
+        height: 500px;
+        display: flex;
+        padding: 120px 0 50px 0;
+
+    }
+
+    /* coneneur de logo */
+    footer .logo-foot-container {
+        background: url(../illustrations+Logo/All-pages/footer1.png) no-repeat;
+        background-size: contain;
+        background-size: 40%;
+        background-position: 70% 10px;
+        flex: 0.8;
+    }
+
+    /* positionnement logo de gauche */
+    footer .logo-foot-container>div {
+        position: relative;
+        top: 40%;
+        left: 50%;
+
+    }
+
+    /* definition de grid area */
+    footer .container-text {
+        flex: 1.2;
+        display: grid;
+        grid-template-areas: 'page social social'
+            'foot foot foot';
+    }
+
+    footer .about {
+        grid-area: page;
+    }
+
+    footer .social {
+        grid-area: social;
+    }
+
+    footer .social .marge {
+        margin-top: 15px;
+        margin-right: 15px;
+    }
+
+    footer .text-foot {
+        grid-area: foot;
+    }
+
+    /* modification du style global de li */
+    footer li, footer p {
+        font-size: calc(0.5rem + 0.5vw);
+        margin: 10px;
+    }
+
+    footer ul {
+        margin-top: 10px;
+    }
+
+    footer li, footer h2, footer p {
+        font-family: "Cantarell", sans-serif;
+        color: #9e91b7;
+
+    }
+
+    footer h2 {
+        padding: 5px 0 10px 5px;
+        font-size: calc(0.8rem + 0.6vw);
+        letter-spacing: 4px;
+    }
+}
+
+/* definition de style propre à index */
+
+/* section Black Panther  */
+section.blackPanther {
+    margin-top: 20px;
+    width: 100%;
+    height: 600px;
+    background: url(../illustrations+Logo/Accueil/Pantherhome1..png) no-repeat;
+    background-size: 65%;
+    background-position-x: right;
+}
+
+.blackPanther>div {
+    width: 30%;
+    position: relative;
+    top: 25%;
+    left: 10%;
+}
+
+.blackPanther div h1 {
+    margin-bottom: 10px;
+}
+
+.blackPanther div h2 {
+    margin-bottom: 30px;
+}
+
+.blackPanther div p {
+    width: 80%;
+}
+
+
+/* section personnage */
+
+.perso .perso-container {
+    width: 92%;
+    height: 270px;
+    background-color: #021740;
+    display: flex;
+    position: relative;
+    left: 8%;
+
+}
+
+.perso-container .item2, .perso-container .item4 {
+    flex: 1;
+    padding: 40px 30px;
+
+}
+
+.perso-container h2 {
+    margin-bottom: 15px;
+}
+
+.perso-container .item1, .perso-container .item3, .perso-container .item5 {
+    display: flex;
+}
+
+.perso-container .item1 {
+    padding-left: 2%;
+    width: 23%;
+    align-items: center;
+}
+
+.perso-container img {
+    max-width: 100%;
+
+}
+
+/* section historique */
+
+section.historique {
+    margin-top: 100px;
+}
+
+.historique .bloc-historique {
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+
+.historique p {
+    margin-bottom: 20px;
+}
+
+.historique h2 {
+    margin: 40px 20px 20px 20px;
+}
+
+/* section nous contacter */
+section.contacter * {
+    display: block;
+}
+
+section.contacter {
+    background: url(../illustrations+Logo/Accueil/Pantherhome7.png) no-repeat;
+    background-size: cover;
+    padding: 10px;
+}
+
+/* mise en forme de la box du formulaire */
+.contacter .form-contact {
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 20%, rgba(255, 255, 255, 0)100%);
+    border-radius: 150px;
+    width: 50%;
+    margin: 100px auto;
+    padding: 40px 0;
+}
+
+/* definition typo propre */
+.contacter h2 {
+    font-family: 'Cantarell', sans-serif;
+    font-size: calc(1.5rem + 1vw);
+
+}
+
+.contacter h2, .contacter p {
+    text-align: center;
+    margin: 0 auto;
+    color: black;
+}
+
+/* definition de radius et centrage avec marge */
+.contacter input, .contacter textarea, .contacter button {
+    margin: 20px auto;
+    border-radius: 20px;
+    width: 50%;
+    padding: 10px;
+}
+
+.contacter .form-contact input[type='text'] {
+    margin-bottom: 0;
+}
+
+.contacter .form-contact input[type='email'] {
+    margin-top: 10px;
+}
+
+/* suppression de la couleur de fond champ */
+.contacter input, .contacter textarea {
+    background-color: transparent;
+}
+
+::placeholder {
+    color: black;
+    padding-left: 10px;
+}
+
+.contacter textarea {
+    resize: none;
+}
+
+/* largeur boutton envoyer */
+.contacter button {
+    width: 17%;
+}
+
+/* fond avant footer */
+div.fond {
+    width: 100%;
+    height: 150px;
 }
