@@ -1,9 +1,6 @@
 @import 'index-style.css' layer(global-form);
 
 /* section wakanda forever */
-* {
-    /* border: gold 1px solid; */
-}
 
 section.wakanda {
     background: url(../illustrations+Logo/Wakanda/Pantherwakanda1.png) no-repeat;
@@ -39,6 +36,7 @@ section.wakanda {
 }
 
 /* section univers de Black Panther */
+/* separatin en deux colonne */
 
 section.panther-univers {
     padding: 100px 0;
@@ -52,6 +50,11 @@ section.panther-univers {
 
 .panther-univers h2 {
     margin: 40px 0;
+}
+
+/* debut deuxieme colonne */
+.panther-univers .culte h2 {
+    padding-top: 40px;
 }
 
 /* marge inferieure plus grande */
@@ -76,7 +79,15 @@ section.panther-univers {
     font-style: normal;
 }
 
+/* video */
+.panther-univers .video {
+    margin: 20px;
+}
+
 /* image */
 .panther-univers .illustration img {
-    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+    max-width: 90%;
 }
