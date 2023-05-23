@@ -39,7 +39,123 @@ section.defi {
 
 /* section questionnaire enigme */
 
+
+section.enigme {
+    margin: 100px 0;
+    width: 85%;
+    position: relative;
+    left: 15%;
+}
+
+.enigme .sujet {
+    width: 55%;
+    margin: 30px 0;
+}
+
+/* enigme à resoudre */
+section.enigme .sujet q {
+    font-size: calc(1rem + 1vw);
+    color: #9e91b7;
+    font-weight: normal;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    line-height: 1.5;
+}
+
+/* suppression des crpchet d'origine */
+section.enigme .sujet q::before, section.enigme .sujet q::after {
+    content: none;
+}
+
+/* disposition flex */
+.flex-container {
+    display: flex;
+
+}
+
 /* transcription */
-section.enigme .transcription .wakanda_font {
+.enigme .transcription .wakanda_font, section.enigme .sujet q {
     font-family: 'Wakanda Forever', sans-serif;
+}
+
+/* conteneur formulaire et transcription */
+.enigme .contenant {
+    flex: 1;
+}
+
+.enigme .transcription {
+    margin: 30px 0;
+}
+
+.enigme .transcription p:nth-of-type(1) {
+    margin-bottom: 20px;
+}
+
+.enigme .contenant .formulaire {
+    margin: 100px 0;
+}
+
+/* rendre les element de form en bloc */
+.enigme .contenant .formulaire * {
+    display: block;
+    font-family: 'Carantall', sans-serif;
+    font-size: calc(0.5rem + 0.5vw);
+
+}
+
+/* champ de reponse */
+.enigme .formulaire textarea {
+    outline: none;
+    resize: none;
+    width: 85%;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin: 10px 0;
+    border: solid 2px;
+    color: #9e91b7;
+    background-color: transparent;
+}
+
+.enigme .formulaire textarea::placeholder {
+    color: #9e91b7;
+}
+
+/* bouton envoyer */
+.enigme .formulaire button {
+    background-color: #f2cef2;
+    color: #021720;
+    padding: 10px 30px;
+    border-style: none;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: 60px 0 0 30%;
+}
+
+/* conteneur aside */
+.enigme aside {
+    flex: 2;
+    background: url(../illustrations+Logo/Enigme/Pantherenigme2.png) no-repeat;
+    background-position-x: 30%;
+    background-size: 80%;
+
+}
+
+.enigme aside h3 {
+    font-family: 'Cantarell', sans-serif;
+    font-size: calc(0.5rem + 0.5vw);
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.enigme aside p {
+    text-align: center;
+}
+
+.enigme aside .aside-element {
+    width: 50%;
+    position: relative;
+    top: 30%;
+    left: 20%;
 }

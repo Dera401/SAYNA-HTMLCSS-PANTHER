@@ -84,6 +84,7 @@
     p, span.plus {
         font-family: 'Cantarell', serif;
         font-size: calc(0.5rem + 0.5vw);
+        color: #ffffff;
         line-height: 1.5;
         font-weight: normal;
         text-align: justify;
@@ -185,7 +186,7 @@
 
     footer li, footer h2, footer p {
         font-family: "Cantarell", sans-serif;
-        color: #9e91b7;
+        color: #f2cef2;
 
     }
 
@@ -416,6 +417,7 @@ section.contacter {
     background-color: transparent;
 }
 
+/* placeholder */
 ::placeholder {
     color: black;
     padding-left: 10px;
