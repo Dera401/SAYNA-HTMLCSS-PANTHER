@@ -1,1 +1,45 @@
 @import 'index-style.css' layer(global-form);
+
+
+* {
+    /* border: gold 1px solid; */
+}
+
+/* section defi enigme */
+section.defi {
+    background: url(../illustrations+Logo/Enigme/Pantherenigme1.png) no-repeat;
+    background-size: 70%;
+    width: 95%;
+    height: 700px;
+}
+
+.defi>div {
+    width: 50%;
+    height: 540px;
+    position: relative;
+    top: 20%;
+    left: 50%;
+}
+
+.defi h1 {
+    font-family: 'Beyno', sans-serif;
+    letter-spacing: 3px;
+    font-size: calc(2.7rem + 1.5vw);
+    text-align: justify;
+    margin-right: 22%;
+    margin-left: 10%;
+}
+
+.defi .paragraphe {
+    background: url(../illustrations+Logo/Enigme/Pantherenigme2.png) no-repeat;
+    background-size: contain;
+    height: 450px;
+    padding: 20%;
+}
+
+/* section questionnaire enigme */
+
+/* transcription */
+section.enigme .transcription .wakanda_font {
+    font-family: 'Wakanda Forever', sans-serif;
+}

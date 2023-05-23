@@ -39,7 +39,7 @@
 
     /* bordure de test */
     body * {
-        border: 1px solid gold;
+        /* border: 1px solid gold; */
 
     }
 
@@ -59,6 +59,7 @@
     li {
         font-family: 'Beyno', sans-serif;
         font-size: calc(0.8rem + 0.6vw);
+        font-weight: normal;
         color: white;
     }
 
@@ -69,12 +70,14 @@
     h1 {
         font-family: 'Panthera', sans-serif;
         font-size: calc(2.5rem + 2vw);
+        font-weight: normal;
         color: #9e91b7;
     }
 
     h2 {
         font-family: 'Beyno', sans-serif;
         font-size: calc(1rem + 1vw);
+        font-weight: normal;
         color: #9e91b7;
     }
 
@@ -82,6 +85,7 @@
         font-family: 'Cantarell', serif;
         font-size: calc(0.5rem + 0.5vw);
         line-height: 1.5;
+        font-weight: normal;
         text-align: justify;
     }
 
@@ -301,6 +305,7 @@ section.historique {
     width: 80%;
     margin-top: 250px;
     border-radius: 10px;
+    padding-bottom: 80px;
 
 }
 
@@ -310,10 +315,34 @@ section.historique {
     font-family: 'Carantall', sans-serif;
 }
 
+.historique .carte-Panther .bordure-carte p {
+    margin-bottom: 5px;
+}
+
 .historique .carte-Panther .bordure-carte h2 {
     font-size: calc(1rem + 0.8vw);
     text-align: center;
     margin: 10px 0 0 0;
+}
+
+.historique .carte-Panther .bordure-carte ul {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.historique .carte-Panther .descr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.historique .carte-Panther .bordure-carte li {
+    font-size: calc(0.5rem + 0.5vw);
+    background-color: #3D2DA6;
+    color: white;
+    margin: 10px 0;
+    padding: 10px 10px;
+    border-radius: 5px;
 }
 
 /* position et taille image Panther */
@@ -323,7 +352,7 @@ section.historique {
     width: 90%;
 }
 
-.historique .historique p {
+.historique p {
     margin-bottom: 20px;
 }
 

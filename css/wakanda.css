@@ -1,1 +1,82 @@
 @import 'index-style.css' layer(global-form);
+
+/* section wakanda forever */
+* {
+    /* border: gold 1px solid; */
+}
+
+section.wakanda {
+    background: url(../illustrations+Logo/Wakanda/Pantherwakanda1.png) no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+
+.wakanda .forever {
+    width: 38%;
+    position: relative;
+    top: 35%;
+    left: 18%;
+
+}
+
+/* definition typo propre */
+.wakanda div h1 {
+    font-family: 'Beyno', sans-serif;
+    font-size: calc(2rem + 1.5vw);
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+
+.wakanda div h2 {
+    font-family: 'Wakanda Forever';
+    letter-spacing: 5px;
+    margin: 15px 0;
+}
+
+.wakanda div p {
+    width: 70%;
+    margin-top: 35px;
+}
+
+/* section univers de Black Panther */
+
+section.panther-univers {
+    padding: 100px 0;
+    column-count: 2;
+    column-gap: 100px;
+}
+
+.panther-univers p {
+    margin-bottom: 25px;
+}
+
+.panther-univers h2 {
+    margin: 40px 0;
+}
+
+/* marge inferieure plus grande */
+.panther-univers .origine p:nth-of-type(3), .panther-univers .guerre p:nth-of-type(2) {
+    margin-bottom: 45px;
+}
+
+/* partie citation */
+.panther-univers .guerre p:nth-of-type(3) * {
+    display: block;
+}
+
+.panther-univers q.first::after {
+    content: none;
+}
+
+.panther-univers q.second::before {
+    content: none;
+}
+
+.panther-univers cite {
+    font-style: normal;
+}
+
+/* image */
+.panther-univers .illustration img {
+    max-width: 100%;
+}
