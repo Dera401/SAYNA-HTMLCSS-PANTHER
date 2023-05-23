@@ -63,21 +63,7 @@ section.panther-univers {
 }
 
 /* partie citation */
-.panther-univers .guerre p:nth-of-type(3) * {
-    display: block;
-}
 
-.panther-univers q.first::after {
-    content: none;
-}
-
-.panther-univers q.second::before {
-    content: none;
-}
-
-.panther-univers cite {
-    font-style: normal;
-}
 
 /* video */
 .panther-univers .video {
