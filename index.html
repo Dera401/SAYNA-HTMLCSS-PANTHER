@@ -20,15 +20,9 @@
         </div>
         <nav class="main-nav-container">
             <ul>
-                <a href="./index.html">
-                    <li>ACCUEIL</li>
-                </a>
-                <a href="./wakanda.html">
-                    <li>WAKANDA</li>
-                </a>
-                <a href="./enigme.html">
-                    <li>ENIGME</li>
-                </a>
+                <li><a href="./index.html" id="btnAccueil" class="btnAccueil ">ACCUEIL</a></li>
+                <li><a href="./wakanda.html" id="btnWakanda" class="btnWkanda ">WAKANDA</a></li>
+                <li><a href="./enigme.html" id="btnEnigme" class="btnEnigme">ENIGME</a></li>
             </ul>
         </nav>
         <!-- navigation scroll -->
@@ -295,9 +289,16 @@
                     <input type="text" placeholder="Nom">
                     <input type="email" placeholder="Email">
                     <textarea cols="30" rows="10" placeholder="Message"></textarea>
-                    <button type="submit" value="envoyer">Envoyer</button>
+                    <button type="submit" class="btn-confirm" id="btnConfirm">Envoyer</button>
                 </form>
             </div>
+
+            <div class="popup" id="popup">
+                <img src="./illustrations+Logo/All-pages/icon-check.svg" alt="">
+                <p>Bien reçu. À bientot!!</p>
+                <button type="submit" class="btn-close" id="btnClose">OK</button>
+            </div>
+
         </section>
 
         <!-- section rajout -->
@@ -310,23 +311,25 @@
     <footer>
         <div class="logo-foot-container">
             <div>
-                <a href="#entete"><img src="./illustrations+Logo/All-pages/icon_SAYNA.png" alt="logo SAYNA"></a>
-                <a href="#entete"><img src="./illustrations+Logo/All-pages/icon_x.png" alt="logo x"></a>
-                <a href="#entete"><img src="./illustrations+Logo/All-pages/icon_MARVEL.png" alt="logo MARVEL"></a>
+                <div class="bulle">
+                    <a href=#entete><img src="./illustrations+Logo/All-pages/footer1.png" alt="bulle"></a>
+                </div>
+                <div class="logoSaynaMarvel">
+                    <a href="#entete"><img src="./illustrations+Logo/All-pages/icon_SAYNA.png" alt="logo SAYNA"></a>
+                    <a href="#entete"><img src="./illustrations+Logo/All-pages/icon_x.png" alt="logo x"></a>
+                    <a href="#entete"><img src="./illustrations+Logo/All-pages/icon_MARVEL.png" alt="logo MARVEL"></a>
+                </div>
             </div>
+        </div>
+
 
         </div>
         <div class="container-text">
             <div class="about">
                 <h2>PAGES</h2>
                 <ul>
-                    <a href="#entete">
-                        <li>À propos</li>
-                    </a>
-                    <a href="./wakanda.html">
-                        <li>Wakanda</li>
-                    </a>
-
+                    <li><a href="#entete">À propos</a></li>
+                    <li><a href="./wakanda.html">Wakanda</a></li>
                 </ul>
             </div>
             <div class="social">
@@ -349,6 +352,27 @@
         </div>
 
     </footer>
+
+    <script>
+        // section popup
+        // enregistrement des variables necessaire à l'evenement 
+        var btnConfirm = document.getElementById('btnConfirm');
+        var btnClose = document.getElementById('btnClose');
+        var popup = document.getElementById('popup');
+
+        // definition de l'evenement ouverture de overlay
+        btnConfirm.addEventListener('click', ouvrirFenetre);
+
+        function ouvrirFenetre() {
+            popup.style.display = 'block';
+        }
+
+        btnClose.addEventListener('click', fermerFenetre);
+
+        function fermerFenetre() {
+            popup.style.display = 'none';
+        }
+    </script>
 </body>
 
 </html>

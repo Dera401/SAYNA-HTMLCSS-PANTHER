@@ -5,6 +5,13 @@
     /* border: gold solid 1px; */
 }
 
+
+/* bouton nav principale */
+#btnEnigme {
+    background-color: #3D2DA6;
+    border-radius: 2px;
+}
+
 /* section defi enigme */
 section.defi {
     background: url(../illustrations+Logo/Enigme/Pantherenigme1.png) no-repeat;
@@ -19,6 +26,7 @@ section.defi {
     position: relative;
     top: 20%;
     left: 50%;
+    animation: fade-in ease-in-out 1s;
 }
 
 .defi h1 {
@@ -51,6 +59,7 @@ section.enigme {
 .enigme .sujet {
     width: 55%;
     margin: 30px 0;
+    animation: fade-in ease-in-out 1s;
 }
 
 /* enigme à resoudre */
@@ -86,6 +95,7 @@ section.enigme .sujet q::before, section.enigme .sujet q::after {
 
 .enigme .transcription {
     margin: 30px 0;
+    animation: fade-in ease-in-out 1s;
 }
 
 .enigme .transcription p:nth-of-type(1) {
@@ -127,7 +137,7 @@ section.enigme .sujet q::before, section.enigme .sujet q::after {
     background-color: #f2cef2;
     color: #021720;
     padding: 10px 30px;
-    border-style: none;
+    border: solid 1px;
     border-radius: 20px;
     font-weight: bold;
     margin: 60px 0 0 30%;
@@ -138,13 +148,50 @@ section.enigme .sujet q::before, section.enigme .sujet q::after {
     box-shadow: #07338C 2px 2px 10px;
 }
 
+/* popup */
+
+.formulaire #popup {
+    width: 300px;
+    height: 300px;
+    background-color: #f2cef2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -50%);
+    display: none;
+    z-index: 10;
+}
+
+
+.formulaire #popup p {
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: center;
+    font-size: calc(1rem + 1vw);
+    color: #021720;
+}
+
+.formulaire .popup img {
+    width: 100px;
+    align-self: center;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.formulaire #btnClose {
+    margin-top: 20px;
+    margin-left: 120px;
+    padding: 10px 20px;
+
+}
+
 /* conteneur aside */
 .enigme aside {
     flex: 2;
     background: url(../illustrations+Logo/Enigme/Pantherenigme2.png) no-repeat;
     background-position-x: 30%;
     background-size: 80%;
-
+    animation: fade-in ease-in-out 1s;
 }
 
 .enigme aside h3 {

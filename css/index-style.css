@@ -46,6 +46,7 @@
     html {
         background: url(../illustrations+Logo/All-pages/arrière_plan.png);
         color: white;
+        /* max-width: 1600px; */
         width: 100%;
         font-size: 10px;
     }
@@ -53,6 +54,7 @@
     body {
 
         padding-top: 20px;
+
     }
 
     /* Tipographie global */
@@ -68,20 +70,25 @@
 
     }
 
+    ul a:link, ul a:visited, ul a:focus {
+        padding: 3px;
+        text-decoration: none;
+        color: #fff;
+    }
+
+
     ul a:hover {
         border-bottom: #fff 2px solid;
         padding-bottom: 3px;
     }
 
-    ul a {
-        text-decoration: none;
-    }
 
     h1 {
         font-family: 'Panthera', sans-serif;
         font-size: calc(2.5rem + 2vw);
         font-weight: normal;
         color: #9e91b7;
+
     }
 
     h2 {
@@ -119,9 +126,30 @@
         border-bottom: solid white 1px;
     }
 
+    img {
+        max-width: 100%;
+    }
+
+    @keyframes fade-in {
+
+        from {
+            transform: translateX(-20%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translate(0);
+            opacity: 1;
+        }
+    }
+
     /* changement de couleur violet de sayna x marvel entete */
     .logo-entete-container .violet:hover {
         filter: invert(22%) sepia(58%) saturate(2921%) hue-rotate(238deg) brightness(76%) contrast(102%);
+    }
+
+    .menu-scroll .conteneur-logo .blanc:hover {
+        filter: invert(22%) sepia(58%) saturate(0%) hue-rotate(238deg) brightness(100%) contrast(1000%);
     }
 
     /* definition de la classe container pour definir 80% de la largeur de la page */
@@ -159,20 +187,30 @@
 
     /* coneneur de logo */
     footer .logo-foot-container {
-        background: url(../illustrations+Logo/All-pages/footer1.png) no-repeat;
-        background-size: contain;
-        background-size: 40%;
-        background-position: 70% 10px;
+        position: relative;
         flex: 0.8;
+
     }
 
     /* positionnement logo de gauche */
     footer .logo-foot-container>div {
         width: 200px;
         position: relative;
-        top: 40%;
-        left: 50%;
+        top: 120px;
+        left: 270px;
+    }
 
+    footer .logo-foot-container .logoSaynaMarvel {
+        width: 200px;
+        position: relative;
+        left: 40px;
+    }
+
+    footer .logo-foot-container .bulle {
+        width: 250px;
+        position: absolute;
+        top: -125px;
+        left: 0;
     }
 
     /* definition de grid area */
@@ -203,13 +241,7 @@
     /* modification du style global de li */
     footer li, footer p {
         font-size: calc(0.5rem + 0.5vw);
-        padding: 5px;
-    }
-
-    /* resolution bug borber bottom qui s'affiche pas */
-    footer ul a {
-        display: block;
-        width: 25%;
+        padding-top: 5px;
     }
 
     footer ul {
@@ -243,10 +275,11 @@
 
 /* definition de style propre à index */
 
-/* modif couleur logo social en blanc */
-/* .menu-scroll .conteneur-logo .blanc:hover {} */
 
-
+#btnAccueil {
+    background-color: #3D2DA6;
+    border-radius: 2px;
+}
 
 /* navigation fixed */
 .menu-scroll {
@@ -278,6 +311,10 @@
     top: 0px;
 }
 
+.menu-scroll .conteneur-logo img {
+    max-width: initial;
+}
+
 /* postitionnement des logos */
 
 .menu-scroll .conteneur-logo img:nth-of-type(1), .menu-scroll .conteneur-logo img:nth-of-type(2), .menu-scroll .conteneur-logo img:nth-of-type(3) {
@@ -299,6 +336,7 @@ section.blackPanther {
     position: relative;
     top: 25%;
     left: 10%;
+    animation: fade-in ease-in-out 1s;
 }
 
 .blackPanther div h1 {
@@ -329,6 +367,7 @@ section.blackPanther {
 .perso-container .item2, .perso-container .item4 {
     flex: 1;
     padding: 40px 30px;
+    animation: fade-in ease-in-out 1s;
 
 }
 
@@ -359,6 +398,7 @@ section.historique {
     display: grid;
     grid-template-areas: "ensemble carte"
         "histoire2 poster";
+    animation: fade-in ease-in-out 1s;
 }
 
 .historique .ensemble {
@@ -456,6 +496,7 @@ section.contacter * {
 section.contacter {
     background: url(../illustrations+Logo/Accueil/Pantherhome7.png) no-repeat;
     background-size: cover;
+    position: relative;
     padding: 10px;
 }
 
@@ -484,6 +525,7 @@ section.contacter {
 /* definition de radius et centrage avec marge */
 .contacter input, .contacter textarea, .contacter button {
     margin: 20px auto;
+    background-color: #f2cef2;
     border-radius: 20px;
     width: 50%;
     padding: 10px;
@@ -522,6 +564,33 @@ section.contacter {
 
 .contacter button:hover {
     box-shadow: #021740 1px 1px 10px;
+}
+
+/* popup */
+
+.contacter .popup {
+    width: 300px;
+    height: 300px;
+    background-color: #f2cef2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+
+.contacter .popup p {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: calc(1rem + 1vw);
+}
+
+.contacter .popup img {
+    width: 100px;
+    align-self: center;
+    margin: 0 auto;
+    padding-top: 50px;
 }
 
 /* fond avant footer */
