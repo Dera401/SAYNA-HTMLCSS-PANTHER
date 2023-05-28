@@ -1,2 +1,2 @@
-Ce projet a été réalisé par ANDRIANARIJAONA Malala Tiavina Fiderana
-Ce projet Black Panther est  un projet pour notre evaluation sur le module HTML et CSS dans notre apprentissage au sein de SAYNA
+This project was created by ANDRIANARIJAONA Malala Tiavina Fiderana
+This Black Panther project is a project for our evaluation of the HTML and CSS module in our training at SAYNA.
