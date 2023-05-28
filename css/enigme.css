@@ -1,11 +1,6 @@
 @import 'index-style.css' layer(global-form);
 
 
-* {
-    /* border: gold solid 1px; */
-}
-
-
 /* bouton nav principale */
 #btnEnigme {
     background-color: #3D2DA6;
@@ -197,7 +192,8 @@ section.enigme .sujet q::before, section.enigme .sujet q::after {
 .enigme aside h3 {
     font-family: 'Cantarell', sans-serif;
     font-size: calc(0.5rem + 0.5vw);
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    margin-bottom: 7%;
     text-align: center;
 
 }
@@ -209,6 +205,126 @@ section.enigme .sujet q::before, section.enigme .sujet q::after {
 .enigme aside .aside-element {
     width: 50%;
     position: relative;
-    top: 30%;
+    /* top: 30%; */
+    /* valeur qui diminue en fonction de la largeur de la page */
+    top: 8vw;
     left: 20%;
+}
+
+/* media querries */
+
+@media screen and (max-width:1530px) {
+    .defi h1 {
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    section.defi {
+        margin: 0 auto;
+        background-position: center 0;
+        height: 100vw;
+    }
+
+    .defi>div {
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+        position: relative;
+        left: 0;
+        top: 40vw;
+    }
+
+    .defi h1 {
+        margin: 0 100px;
+        text-align: center;
+        font-size: calc(2rem + 1.5vw);
+    }
+
+    .defi .paragraphe {
+        background-position: center 0, 50px 40vw;
+        height: 45vw;
+    }
+
+    section.enigme {
+        width: 95%;
+        margin: 0 auto;
+        left: 0;
+    }
+
+    .enigme .sujet {
+        width: 75%;
+    }
+
+    .enigme aside {
+        background-size: contain;
+        background-position-y: 50%;
+    }
+
+    .enigme aside .aside-element {
+        width: 70%;
+        top: 16vw;
+        top: 140px;
+        left: 15%;
+
+    }
+
+
+    .enigme .contenant .formulaire {
+        margin: 10vw 0 30px 0;
+    }
+
+    .enigme .formulaire button {
+        margin: 5vw auto;
+    }
+
+
+}
+
+@media screen and (max-width:704px) {
+    .defi h1 {
+        margin: 0 50px;
+    }
+
+    .enigme aside .aside-element {
+        top: 120px;
+    }
+
+}
+
+@media screen and (max-width:557px) {
+    .enigme aside .aside-element {
+        top: 110px;
+    }
+}
+
+@media screen and (max-width:547px) {
+    section.defi {
+        height: 110vw;
+    }
+
+    .defi>div {
+        width: 100%;
+    }
+
+    .defi h1 {
+        font-size: calc(2rem + 1vw);
+    }
+
+    .defi .paragraphe {
+        background-size: 110%;
+        height: 60vw;
+        background-position: center 0, 50px 55vw;
+    }
+
+    .enigme aside {
+        background-size: 120%;
+    }
+
+    .enigme aside .aside-element {
+        width: 80%;
+        left: 13%;
+
+    }
 }

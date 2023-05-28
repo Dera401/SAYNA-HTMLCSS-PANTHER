@@ -37,11 +37,6 @@
         box-sizing: border-box;
     }
 
-    /* bordure de test */
-    body * {
-        /* border: 1px solid gold; */
-
-    }
 
     html {
         background: url(../illustrations+Logo/All-pages/arrière_plan.png);
@@ -177,6 +172,7 @@
     /* partie footer */
     /* definition de footer en flex */
 
+
     footer {
         background: url(../illustrations+Logo/All-pages/back_footer.png);
         width: 100%;
@@ -187,15 +183,11 @@
     }
 
     /* coneneur de logo */
-    footer .logo-foot-container {
-        position: relative;
-        flex: 0.8;
-
-    }
 
     /* positionnement logo de gauche */
 
     footer .logo-foot-container {
+        flex: 0.8;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -203,11 +195,11 @@
         position: relative;
         padding-right: 50px;
         left: 100px;
+        z-index: 3;
 
     }
 
     footer .logo-foot-container .logoSaynaMarvel {
-        /* width: 250px; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -222,6 +214,7 @@
 
     /* definition de grid area */
     footer .container-text {
+        z-index: 10;
         flex: 1.2;
         display: grid;
         grid-template-areas: 'page social social'
@@ -735,8 +728,6 @@ div.fond {
     .historique .carte-Panther .bordure-carte {
         width: 90%;
     }
-
-
 }
 
 @media screen and (max-width:741px) {
@@ -784,48 +775,49 @@ div.fond {
     .contacter button {
         width: 25%;
     }
+}
 
-    @media screen and (max-width:645px) {
-        .historique .carte-Panther .bordure-carte li {
-            padding: 5px 5px;
-        }
+@media screen and (max-width:645px) {
+    .historique .carte-Panther .bordure-carte li {
+        padding: 5px 5px;
+    }
 
-        .historique .carte-Panther .bordure-carte {
+    .historique .carte-Panther .bordure-carte {
 
-            padding-bottom: 20px;
-
-        }
+        padding-bottom: 20px;
 
     }
 
+}
 
 
-    @media screen and (max-width:532px) {
-        .entete {
-            width: 70%;
-        }
 
-        section.blackPanther {
-            height: 85vw;
-        }
-
-        .blackPanther>div {
-            text-align: center;
-        }
-
-        .blackPanther div p {
-            width: 100%;
-        }
-
-        .contacter .form-contact {
-            width: 80%;
-
-        }
+@media screen and (max-width:532px) {
+    .entete {
+        width: 70%;
     }
 
-    @media screen and (max-width:453px) {
-        .entete {
-            width: 50%;
-        }
+    section.blackPanther {
+        height: 85vw;
+    }
+
+    .blackPanther>div {
+        text-align: center;
+    }
+
+    .blackPanther div p {
+        width: 100%;
+    }
+
+    .contacter .form-contact {
+        width: 80%;
 
     }
+}
+
+@media screen and (max-width:453px) {
+    .entete {
+        width: 50%;
+    }
+
+}
